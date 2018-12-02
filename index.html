@@ -13,6 +13,29 @@
 <style type="text/css">
 	audio{position:fixed;bottom:0;right:0;}
 </style>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js">
+    document.addEventListener("WeixinJSBridgeReady", function () { 
+        document.getElementById('mp3Btn').play(); 
+        // document.getElementById('video').play(); 
+    }, false);
+	document.addEventListener('DOMContentLoaded', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('audio');
+            audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+	document.addEventListener('touchstart', function () {
+    function audioAutoPlay() {
+        var audio = document.getElementById('audio');
+            audio.play();
+    }
+    audioAutoPlay();
+});
+</script> 
 </head>
 
 <body>
